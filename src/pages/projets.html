@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Projets — Portfolio Ana-Maria</title>
+
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/variables.css">
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/layout.css">
+    <style>
+        /* style local simple pour les cartes projets */
+        .cards{display:grid;gap:18px}
+        .card{
+            background:#fff;border:1px solid #e9e9e9;border-radius:12px;padding:16px;
+            display:grid;gap:10px
+        }
+        .card h3{margin:0}
+        .card img{border-radius:10px}
+        @media(min-width:720px){ .cards{grid-template-columns:repeat(3,1fr)} }
+    </style>
+</head>
+<body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+
+<header class="topbar" role="banner">
+    <div class="brand">Ana-Maria Voisard</div>
+    <nav class="main-nav" aria-label="Navigation principale">
+        <ul>
+            <li><a href="/src/pages/index.html">Accueil</a></li>
+            <li><a href="/src/pages/cv.html">CV</a></li>
+            <li><a aria-current="page" href="/src/pages/projets.html">Projets</a></li>
+            <li><a href="/src/pages/contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main id="contenu" class="container section">
+    <h1>Projets</h1>
+    <p class="subtitle">Quelques exercices et mini-réalisations pendant ma formation.</p>
+
+    <div class="cards" role="list">
+        <article class="card" role="listitem">
+            <img src="../assets/img/landing.jpg" alt="Aperçu du projet 1">
+            <h3>TimeHive (C#)</h3>
+            <p>Petit gestionnaire de tâches en console (priorités, échéances, export CSV).</p>
+            <a class="btn btn-ghost" href="#">Voir le code</a>
+        </article>
+
+        <article class="card" role="listitem">
+            <img src="../assets/img/landing.jpg" alt="Aperçu du projet 2">
+            <h3>Mini-Tricorder</h3>
+            <p>Capteur portable (CO₂, PM2.5, UV) avec affichage et log.</p>
+            <a class="btn btn-ghost" href="#">Détails</a>
+        </article>
+
+        <article class="card" role="listitem">
+            <img src="../assets/img/landing.jpg" alt="Aperçu du projet 3">
+            <h3>Portfolio Web</h3>
+            <p>Ce site : HTML sémantique, variables CSS, responsive mobile-first.</p>
+            <a class="btn btn-ghost" href="/src/pages/index.html">Voir l’accueil</a>
+        </article>
+    </div>
+</main>
+
+<footer class="site-footer" role="contentinfo">
+    <p>&copy; <span id="annee"></span> Ana-Maria Voisard</p>
+</footer>
+<script>document.getElementById('annee').textContent = new Date().getFullYear();</script>
+</body>
+</html>
