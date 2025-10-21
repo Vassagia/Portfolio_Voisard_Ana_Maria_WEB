@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CV — Portfolio Ana-Maria</title>
+
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/variables.css" />
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+</head>
+
+<body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+
+<header class="topbar" role="banner">
+    <div class="brand">Ana-Maria Voisard</div>
+    <nav class="main-nav" aria-label="Navigation principale">
+        <ul>
+            <li><a href="/src/pages/index.html">Accueil</a></li>
+            <li><a aria-current="page" href="/src/pages/cv.html">CV</a></li>
+            <li><a href="/src/pages/contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main id="contenu" class="container">
+    <header class="section">
+        <h1>Curriculum Vitæ</h1>
+        <p class="subtitle">Informaticienne de gestion — ESIG</p>
+    </header>
+
+    <section class="section" aria-labelledby="profil">
+        <h2 id="profil">Profil</h2>
+        <p>
+            Étudiante en informatique de gestion à l’ESIG, passionnée par la technologie,
+            la production, la gestion et l’amélioration continue. Expérience en
+            micro-électronique et en management d’équipe.
+        </p>
+    </section>
+
+    <section class="section" aria-labelledby="competences">
+        <h2 id="competences">Compétences</h2>
+        <ul>
+            <li><strong>Langages :</strong> HTML, CSS, C# (débutante)</li>
+            <li><strong>Outils :</strong> WebStorm, Git, GitHub, Visual Studio</li>
+            <li><strong>Transversales :</strong> Organisation, communication, leadership</li>
+        </ul>
+    </section>
+
+    <section class="section" aria-labelledby="experiences">
+        <h2 id="experiences">Expériences</h2>
+
+        <article>
+            <h3>Responsable de secteur — PRECI-DIP SA (Delémont)</h3>
+            <p>Encadrement d’équipe, suivi qualité, indicateurs de production et Lean management.</p>
+        </article>
+
+        <article>
+            <h3>Gérante — Bar Le Sauvage (Courtételle)</h3>
+            <p>Gestion d’un établissement public : équipe, budget, fournisseurs, clientèle fidèle.</p>
+        </article>
+    </section>
+
+    <section class="section" aria-labelledby="formations">
+        <h2 id="formations">Formations</h2>
+        <ul>
+            <li><strong>ESIG —</strong> Informatique de gestion (2024– )</li>
+            <li><strong>ASFC —</strong> Leadership & Management (2024–2026)</li>
+            <li><strong>IPC-A-610 —</strong> Microélectronique (2023)</li>
+        </ul>
+    </section>
+</main>
+
+<footer class="site-footer" role="contentinfo">
+    <p>&copy; <span id="annee"></span> Ana-Maria Voisard — Tous droits réservés</p>
+</footer>
+
+<script>
+    document.getElementById('annee').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
