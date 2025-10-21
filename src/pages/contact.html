@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact — Portfolio Ana-Maria</title>
+
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/variables.css" />
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+    <style>
+        form { display: grid; gap: 14px; max-width: 600px; margin: 0 auto; }
+        label { font-weight: 600; }
+        input, textarea {
+            width: 100%;
+            padding: 10px 12px;
+            border-radius: var(--radius);
+            border: 1px solid #ccc;
+            font: inherit;
+        }
+        textarea { resize: vertical; }
+    </style>
+</head>
+
+<body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+
+<header class="topbar" role="banner">
+    <div class="brand">Ana-Maria Voisard</div>
+    <nav class="main-nav" aria-label="Navigation principale">
+        <ul>
+            <li><a href="/src/pages/index.html">Accueil</a></li>
+            <li><a href="/src/pages/cv.html">CV</a></li>
+            <li><a aria-current="page" href="/src/pages/contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main id="contenu" class="container section">
+    <h1>Contact</h1>
+    <p class="subtitle">N’hésite pas à me laisser un message via le formulaire ci-dessous :</p>
+
+    <form id="contact-form" action="#" method="post" novalidate>
+        <div>
+            <label for="nom">Nom</label>
+            <input id="nom" name="nom" type="text" placeholder="Votre nom" required />
+        </div>
+
+        <div>
+            <label for="email">E-mail</label>
+            <input id="email" name="email" type="email" placeholder="votrenom@exemple.com" required />
+        </div>
+
+        <div>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Votre message..." required></textarea>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Envoyer</button>
+        <button class="btn btn-ghost" type="reset">Effacer</button>
+
+        <p id="confirmation" aria-live="polite"></p>
+    </form>
+</main>
+
+<footer class="site-footer" role="contentinfo">
+    <p>&copy; <span id="annee"></span> Ana-Maria Voisard</p>
+</footer>
+
+<script>
+    document.getElementById('annee').textContent = new Date().getFullYear();
+
+    document.getElementById('contact-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+        document.getElementById('confirmation').textContent =
+            "Merci pour votre message (simulation locale).";
+    });
+</script>
+</body>
+</html>
