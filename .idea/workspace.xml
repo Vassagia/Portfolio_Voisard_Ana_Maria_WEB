@@ -4,11 +4,49 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="236a0f59-0082-473f-8df0-69c704a1f90e" name="Changes" comment="" />
+    <list default="true" id="236a0f59-0082-473f-8df0-69c704a1f90e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/00_intro.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/01_arborescence.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/02_commits.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/03_css.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/04_bugs_et_solutions.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/css/base.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/css/layout.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/css/reset.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/css/variables.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/partials/ header.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/partials/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Vassagia&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Vassagia/Portfolio_Voisard_Ana_Maria_WEB.git&quot;,
+    &quot;accountId&quot;: &quot;43a25258-6e07-480e-b51c-73f581b4ea37&quot;
+  }
+}</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/docs/02_commits.md" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
@@ -22,10 +60,13 @@
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "C:/Users/annem/source/repos/Portfolio_Voisard_Ana_Maria_WEB",
+    "last_opened_file_path": "C:/Users/annem/source/repos/Portfolio_Voisard_Ana_Maria_WEB/src",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -37,6 +78,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\annem\source\repos\Portfolio_Voisard_Ana_Maria_WEB\src" />
       <recent name="C:\Users\annem\Documents\Porttfolio_Voisard_Ana_Maria_WEB\src\assets\img" />
     </key>
   </component>
@@ -59,11 +101,23 @@
       <workItem from="1760971296334" duration="182000" />
       <workItem from="1760971490331" duration="15000" />
       <workItem from="1760971546689" duration="128000" />
-      <workItem from="1760971688865" duration="118000" />
+      <workItem from="1760971688865" duration="6031000" />
+      <workItem from="1761056339385" duration="4344000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
