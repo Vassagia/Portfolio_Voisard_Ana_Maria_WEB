@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="236a0f59-0082-473f-8df0-69c704a1f90e" name="Changes" comment="chore: rajout checklist dans la structure de base du projet (HTML/CSS)&#10;feat(index): créer structure HTML de la page d’accueil">
+    <list default="true" id="236a0f59-0082-473f-8df0-69c704a1f90e" name="Changes" comment="style(reset): ajouter fichier reset CSS pour normaliser le rendu&#10;style(variables): définir les variables CSS (couleurs, espacements)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/css/reset.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/reset.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/css/variables.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/variables.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/img/landing.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/base.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/css/layout.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/layout.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +90,7 @@
       <workItem from="1760971490331" duration="15000" />
       <workItem from="1760971546689" duration="128000" />
       <workItem from="1760971688865" duration="6031000" />
-      <workItem from="1761056339385" duration="7645000" />
+      <workItem from="1761056339385" duration="8414000" />
     </task>
     <task id="LOCAL-00001" summary="chore: structure de base du projet (HTML/CSS/JS)">
       <option name="closed" value="true" />
@@ -109,7 +108,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761076823956</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="style(reset): ajouter fichier reset CSS pour normaliser le rendu&#10;style(variables): définir les variables CSS (couleurs, espacements)">
+      <option name="closed" value="true" />
+      <created>1761077489621</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1761077489621</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,6 +136,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="chore: structure de base du projet (HTML/CSS/JS)" />
     <MESSAGE value="chore: rajout checklist dans la structure de base du projet (HTML/CSS)&#10;feat(index): créer structure HTML de la page d’accueil" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: rajout checklist dans la structure de base du projet (HTML/CSS)&#10;feat(index): créer structure HTML de la page d’accueil" />
+    <MESSAGE value="style(reset): ajouter fichier reset CSS pour normaliser le rendu&#10;style(variables): définir les variables CSS (couleurs, espacements)" />
+    <option name="LAST_COMMIT_MESSAGE" value="style(reset): ajouter fichier reset CSS pour normaliser le rendu&#10;style(variables): définir les variables CSS (couleurs, espacements)" />
   </component>
 </project>
