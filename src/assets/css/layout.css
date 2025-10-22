@@ -28,7 +28,7 @@
 
 /* Section générique */
 .section{padding: var(--space-lg) var(--space)}
-.site-footer{padding: var(--space); text-align:center; color:#666}
+.site-footer{padding: var(--space); text-align:center; color:var(--gray); background:#fafafa; border-top:1px solid #e0e0e0}
 
 /* ──────────────── Breakpoints ──────────────── */
 /* ≥600px : ajustements pour tablettes petites */
