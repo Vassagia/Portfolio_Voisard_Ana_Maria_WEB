@@ -68,12 +68,15 @@
 /* --- Option A : hauteur fixe + recadrage propre (activée) --- */
 .card img {
     width: 100%;
-    height: 220px;          /* même hauteur pour toutes */
-    object-fit: cover;      /* remplit sans déformer, recadre si besoin */
+    height: auto;           /* hauteur s’adapte à la largeur */
+    max-height: 250px;      /* limite la taille pour garder une grille harmonieuse */
+    object-fit: contain;    /* montre l’image entière sans recadrer */
     border-radius: 10px;
     display: block;
-    background: #f4f4f4;
+    background: #f4f4f4;    /* fond neutre visible si l’image ne remplit pas tout */
+    padding: 6px;           /* petit cadre autour de l’image */
 }
+
 
 /* --- Option B : ratio constant (désactivée proprement) ---
 .card img {
@@ -189,29 +192,22 @@ form .btn-ghost {
 /* ================================
    🌙 DARK MODE
    Rend les textes lisibles sur fond sombre
+   Auto-corrigé pour la page Projets
    ================================ */
 @media (prefers-color-scheme: dark) {
 
-    /* Corps de page */
+    /* Arrière-plan global */
     body {
-        background: var(--dark, #121212);
-        color: #f2f2f2; /* texte principal clair */
+        background: #121212;
+        color: #f5f5f5;
     }
 
-    /* Liens généraux */
-    a {
-        color: var(--orange, #ff7043);
-    }
-    a:hover {
-        color: #ffa270;
-    }
-
-    /* Topbar & Footer */
+    /* Topbar & footer */
     .topbar,
     .site-footer {
         background: #1c1c1c;
-        color: #f2f2f2;
-        border-color: #2b2b2b;
+        color: #f5f5f5;
+        border-color: #2a2a2a;
     }
 
     .brand {
@@ -219,7 +215,7 @@ form .btn-ghost {
     }
 
     .main-nav a {
-        color: #f0f0f0;
+        color: #eaeaea;
     }
     .main-nav a:hover,
     .main-nav a[aria-current="page"] {
@@ -228,49 +224,50 @@ form .btn-ghost {
 
     /* Icônes header */
     .icon {
-        background: #2b2b2b;
-        color: #f5f5f5;
+        background: #333;
+        color: #fff;
     }
     .icon:hover {
-        background: #3b3b3b;
+        background: #444;
     }
 
-    /* Section HERO */
+    /* HERO */
     .hero {
-        background: #1e1e1e;
+        background: #1f1f1f;
         color: #ffffff;
     }
-
     .hero__content h1 {
         color: #ffffff;
     }
-
     .hero__content .subtitle {
         color: #dddddd;
     }
 
     .hero__content .btn-primary {
         background: var(--orange, #ff7043);
-        color: #fff;
+        color: #ffffff;
     }
-
     .hero__content .btn-primary:hover {
         background: #ff8a50;
     }
 
     .hero .btn-ghost {
-        border: 1px solid rgba(255,255,255,.35);
-        color: #fff;
+        border: 1px solid rgba(255,255,255,.4);
+        color: #ffffff;
     }
-
     .hero .btn-ghost:hover {
         background: rgba(255,255,255,.1);
     }
 
-    /* Cartes projets */
+    /* === CARTES PROJETS === */
+    .cards {
+        background: transparent;
+    }
+
     .card {
-        background: #1a1a1a;
-        border-color: #2a2a2a;
+        background: #1e1e1e !important;  /* forcé pour éviter blanc sur blanc */
+        border: 1px solid #333;
+        color: #f5f5f5;
         box-shadow: none;
     }
 
@@ -279,27 +276,40 @@ form .btn-ghost {
     }
 
     .card p {
-        color: #cccccc;
+        color: #dddddd;
+    }
+
+    .card img {
+        background: #2a2a2a;
+        border-radius: 10px;
+    }
+
+    .card .btn {
+        border-radius: 6px;
+        padding: 8px 14px;
+        font-weight: 600;
     }
 
     .card .btn.btn-ghost {
-        border: 1px solid #3a3a3a;
-        color: #ffffff;
+        border: 1px solid #444;
+        background: transparent;
+        color: #ff7043; /* bouton accent orange */
     }
 
     .card .btn.btn-ghost:hover {
-        background: rgba(255,255,255,.08);
+        background: #ff7043;
+        color: #fff;
     }
 
-    /* Formulaire contact */
+    /* === FORMULAIRE CONTACT === */
     label {
         color: #ffffff;
     }
 
     input,
     textarea {
-        background: #111111;
-        color: #eeeeee;
+        background: #111;
+        color: #eee;
         border: 1px solid #444;
     }
 
@@ -319,10 +329,14 @@ form .btn-ghost {
 
     form .btn-ghost {
         border: 1px solid #555;
-        color: #f0f0f0;
+        color: #ff7043;
     }
 
-    /* Sections CV */
+    form .btn-ghost:hover {
+        background: rgba(255,255,255,.08);
+    }
+
+    /* === SECTIONS CV === */
     .section h2,
     .section h3 {
         color: #ffffff;

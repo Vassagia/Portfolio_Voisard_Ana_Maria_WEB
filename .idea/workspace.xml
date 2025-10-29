@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="236a0f59-0082-473f-8df0-69c704a1f90e" name="Changes" comment="fix(projets): remplacer roles ARIA par balises sémantiques ul/li">
+    <list default="true" id="236a0f59-0082-473f-8df0-69c704a1f90e" name="Changes" comment="fix(css): corriger commentaires imbriqués dans pages.css + nettoyages&#10;feat(theme): ajouter dark mode auto via prefers-color-scheme&#10;fix(theme): améliorer contrastes du dark mode pour meilleure lisibilité">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/css/pages.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/pages.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/css/variables.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/variables.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/cv.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/cv.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/projets.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/projets.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +100,7 @@
       <workItem from="1761083872078" duration="727000" />
       <workItem from="1761132283321" duration="419000" />
       <workItem from="1761142301424" duration="9258000" />
-      <workItem from="1761730272073" duration="15786000" />
+      <workItem from="1761730272073" duration="17349000" />
     </task>
     <task id="LOCAL-00001" summary="chore: structure de base du projet (HTML/CSS/JS)">
       <option name="closed" value="true" />
@@ -203,7 +198,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761743754933</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="fix(css): corriger commentaires imbriqués dans pages.css + nettoyages&#10;feat(theme): ajouter dark mode auto via prefers-color-scheme&#10;fix(theme): améliorer contrastes du dark mode pour meilleure lisibilité">
+      <option name="closed" value="true" />
+      <created>1761750936797</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1761750936797</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,6 +236,7 @@
     <MESSAGE value="fix style(hero): cadre stable avec aspect-ratio, image en contain (sans recadrage)&#10;fix nav(links): corriger chemins relatifs entre les pages" />
     <MESSAGE value="fix(links): corriger chemins relatifs index↔cv↔projets↔contact" />
     <MESSAGE value="fix(projets): remplacer roles ARIA par balises sémantiques ul/li" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix(projets): remplacer roles ARIA par balises sémantiques ul/li" />
+    <MESSAGE value="fix(css): corriger commentaires imbriqués dans pages.css + nettoyages&#10;feat(theme): ajouter dark mode auto via prefers-color-scheme&#10;fix(theme): améliorer contrastes du dark mode pour meilleure lisibilité" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix(css): corriger commentaires imbriqués dans pages.css + nettoyages&#10;feat(theme): ajouter dark mode auto via prefers-color-scheme&#10;fix(theme): améliorer contrastes du dark mode pour meilleure lisibilité" />
   </component>
 </project>
