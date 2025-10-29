@@ -5,14 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Accueil — Portfolio Ana-Maria</title>
 
-    <!-- Feuilles de style -> garder cet ordre -->
     <link rel="stylesheet" href="../assets/css/reset.css">
     <link rel="stylesheet" href="../assets/css/variables.css">
     <link rel="stylesheet" href="../assets/css/base.css">
     <link rel="stylesheet" href="../assets/css/layout.css">
 </head>
 <body>
-<!-- Lien d’évitement pour l’accessibilité -->
 <a class="skip-link" href="#contenu">Aller au contenu</a>
 
 <header class="topbar" role="banner">
@@ -32,7 +30,6 @@
 </header>
 
 <main id="contenu">
-    <!-- Section HERO : photo à gauche, texte à droite -->
     <section class="hero" aria-labelledby="hero-title">
         <figure class="hero__image">
             <img src="../assets/img/landing.jpg" alt="Portrait d’Ana-Maria" />
@@ -41,36 +38,26 @@
 
         <div class="hero__content">
             <h1 id="hero-title">Je m’appelle Ana-Maria Voisard.</h1>
-            <p class="subtitle">
-                Étudiante à l’ESIG (informatique de gestion). Expérience en production,
-                micro-électronique et management d’équipe.
-            </p>
+            <p class="subtitle">Étudiante à l’ESIG (informatique de gestion). Expérience en production,
+                micro-électronique et management d’équipe.</p>
             <p>
-                <a class="btn btn-primary" href="/src/pages/contact.html">Me contacter</a>
-                <a class="btn btn-ghost" href="/src/pages/cv.html">Voir mon CV</a>
-                <!-- lien interne vers la section À propos -->
+                <a class="btn btn-primary" href="contact.html">Me contacter</a>
+                <a class="btn btn-ghost" href="cv.html">Voir mon CV</a>
                 <a class="btn btn-ghost" href="#apropos">À propos</a>
             </p>
         </div>
     </section>
 
-    <!-- Section À propos -->
     <section id="apropos" class="section container" aria-labelledby="titre-apropos">
         <h2 id="titre-apropos">À propos</h2>
-        <p>
-            J’aime créer des interfaces simples, propres et accessibles. Ce site est mon terrain
-            d’apprentissage HTML/CSS, versionné avec Git et documenté dans <code>/docs</code>.
-        </p>
+        <p>J’aime créer des interfaces simples, propres et accessibles. Ce site est mon terrain
+            d’apprentissage HTML/CSS, versionné avec Git et documenté dans <code>/docs</code>.</p>
     </section>
 </main>
 
 <footer class="site-footer" role="contentinfo">
     <p>&copy; <span id="annee"></span> Ana-Maria Voisard — Tous droits réservés</p>
 </footer>
-
-<script>
-    // année automatique
-    document.getElementById('annee').textContent = new Date().getFullYear();
-</script>
+<script>document.getElementById('annee').textContent = new Date().getFullYear();</script>
 </body>
 </html>

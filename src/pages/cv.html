@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="../assets/css/base.css" />
     <link rel="stylesheet" href="../assets/css/layout.css" />
 </head>
-
 <body>
 <a class="skip-link" href="#contenu">Aller au contenu</a>
 
@@ -19,11 +18,15 @@
     <nav class="main-nav" aria-label="Navigation principale">
         <ul>
             <li><a href="index.html">Accueil</a></li>
-            <li><a href="projets.html">Projets</a></li>
             <li><a aria-current="page" href="cv.html">CV</a></li>
+            <li><a href="projets.html">Projets</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
+    <div class="actions">
+        <a class="icon" href="https://www.linkedin.com/in/anamaria-voisard/" aria-label="LinkedIn">in</a>
+        <a class="icon" href="https://github.com/Vassagia" aria-label="GitHub">gh</a>
+    </div>
 </header>
 
 <main id="contenu" class="container">
@@ -34,17 +37,15 @@
 
     <section class="section" aria-labelledby="profil">
         <h2 id="profil">Profil</h2>
-        <p>
-            Étudiante en informatique de gestion à l’ESIG, passionnée par la technologie,
+        <p>Étudiante en informatique de gestion à l’ESIG, passionnée par la technologie,
             la production, la gestion et l’amélioration continue. Expérience en
-            micro-électronique et en management d’équipe.
-        </p>
+            micro-électronique et en management d’équipe.</p>
     </section>
 
     <section class="section" aria-labelledby="competences">
         <h2 id="competences">Compétences</h2>
         <ul>
-            <li><strong>Langages :</strong> HTML, CSS, C# </li>
+            <li><strong>Langages :</strong> HTML, CSS, C#</li>
             <li><strong>Outils :</strong> WebStorm, Git, GitHub, Visual Studio</li>
             <li><strong>Transversales :</strong> Organisation, communication, leadership</li>
         </ul>
@@ -52,12 +53,10 @@
 
     <section class="section" aria-labelledby="experiences">
         <h2 id="experiences">Expériences</h2>
-
         <article>
-            <h3>Responsable de secteur — Turck / duotec operations SA(Delémont)</h3>
+            <h3>Responsable de secteur — Turck / duotec operations SA (Delémont)</h3>
             <p>Encadrement d’équipe, suivi qualité, indicateurs de production et Lean management.</p>
         </article>
-
         <article>
             <h3>Gérante — Bar Le Sauvage (Courtételle)</h3>
             <p>Gestion d’un établissement public : équipe, budget, fournisseurs, clientèle fidèle.</p>
@@ -77,9 +76,6 @@
 <footer class="site-footer" role="contentinfo">
     <p>&copy; <span id="annee"></span> Ana-Maria Voisard — Tous droits réservés</p>
 </footer>
-
-<script>
-    document.getElementById('annee').textContent = new Date().getFullYear();
-</script>
+<script>document.getElementById('annee').textContent = new Date().getFullYear();</script>
 </body>
 </html>

@@ -13,16 +13,12 @@
         form { display: grid; gap: 14px; max-width: 600px; margin: 0 auto; }
         label { font-weight: 600; }
         input, textarea {
-            width: 100%;
-            padding: 10px 12px;
-            border-radius: var(--radius);
-            border: 1px solid #ccc;
-            font: inherit;
+            width: 100%; padding: 10px 12px; border-radius: var(--radius);
+            border: 1px solid #ccc; font: inherit;
         }
         textarea { resize: vertical; }
     </style>
 </head>
-
 <body>
 <a class="skip-link" href="#contenu">Aller au contenu</a>
 
@@ -36,6 +32,10 @@
             <li><a aria-current="page" href="contact.html">Contact</a></li>
         </ul>
     </nav>
+    <div class="actions">
+        <a class="icon" href="https://www.linkedin.com/in/anamaria-voisard/" aria-label="LinkedIn">in</a>
+        <a class="icon" href="https://github.com/Vassagia" aria-label="GitHub">gh</a>
+    </div>
 </header>
 
 <main id="contenu" class="container section">
@@ -47,20 +47,16 @@
             <label for="nom">Nom</label>
             <input id="nom" name="nom" type="text" placeholder="Votre nom" required />
         </div>
-
         <div>
             <label for="email">E-mail</label>
             <input id="email" name="email" type="email" placeholder="votrenom@exemple.com" required />
         </div>
-
         <div>
             <label for="message">Message</label>
             <textarea id="message" name="message" rows="5" placeholder="Votre message..." required></textarea>
         </div>
-
         <button class="btn btn-primary" type="submit">Envoyer</button>
         <button class="btn btn-ghost" type="reset">Effacer</button>
-
         <p id="confirmation" aria-live="polite"></p>
     </form>
 </main>
@@ -68,14 +64,11 @@
 <footer class="site-footer" role="contentinfo">
     <p>&copy; <span id="annee"></span> Ana-Maria Voisard</p>
 </footer>
-
 <script>
     document.getElementById('annee').textContent = new Date().getFullYear();
-
     document.getElementById('contact-form').addEventListener('submit', function (e) {
         e.preventDefault();
-        document.getElementById('confirmation').textContent =
-            "Merci pour votre message (simulation locale).";
+        document.getElementById('confirmation').textContent = "Merci pour votre message (simulation locale).";
     });
 </script>
 </body>
