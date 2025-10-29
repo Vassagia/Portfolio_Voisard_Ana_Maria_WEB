@@ -1,51 +1,40 @@
-/* Styles spécifiques aux pages */
+/* ─────────────────────────────────────────────
+   PAGES.CSS — styles spécifiques aux pages
+   Projet : Portfolio_Voisard_Ana_Maria_WEB
+   Dossiers : src/assets/css | src/pages | src/assets/img
+   ─────────────────────────────────────────────
+   Chargement recommandé après : reset.css, variables.css,
+   base.css, layout.css
+   ───────────────────────────────────────────── */
 
-/* Page Contact : formulaire */
-form {
-    display: grid;
-    gap: 14px;
-    max-width: 600px;
-    margin: 0 auto;
+/* ================================
+   ACCUEIL (hero)
+   ================================ */
+.hero__content .btn { margin-right: 8px; }
+
+.hero__content .btn-primary {
+    background: var(--orange, #e65100);
+    color: #fff;
 }
 
-label {
-    font-weight: 600;
-    display: block;
-    margin-bottom: 4px;
+.hero__content .btn-primary:hover {
+    background: #d84315;
 }
 
-input,
-textarea {
-    width: 100%;
-    padding: 10px 12px;
-    border-radius: var(--radius);
-    border: 1px solid #ccc;
-    font: inherit;
-    transition: border-color .2s ease;
-}
-
-input:focus,
-textarea:focus {
-    border-color: var(--emerald);
-}
-
-textarea {
-    resize: vertical;
-    min-height: 120px;
-}
-
-#confirmation {
-    padding: 12px;
-    background: #4dedda;
-    color: #155724;
-    border-radius: var(--radius);
-    margin-top: 8px;
-}
-
-/* Page Projets : cartes */
+/* ================================
+   PROJETS (cartes)
+   HTML cible (projets.html) :
+   <ul class="cards">
+     <li><article class="card">…</article></li>
+     …
+   </ul>
+   ================================ */
 .cards {
     display: grid;
-    gap: 10px;
+    gap: 18px;
+    list-style: none;   /* ul sans puces */
+    padding: 0;
+    margin: 0;
 }
 
 .card {
@@ -55,41 +44,297 @@ textarea {
     padding: 16px;
     display: grid;
     gap: 10px;
-    transition: box-shadow .3s ease, transform .2s ease;
+    box-shadow: 0 2px 6px rgba(0,0,0,.04);
+    transition: transform .2s ease, box-shadow .2s ease;
 }
 
 .card:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,.08);
 }
 
 .card h3 {
     margin: 0;
-    color: var(--dark);
-}
-
-.card img {
-    border-radius: 10px;
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    max-height: 200px;
+    font-size: 1.1rem;
+    color: var(--gray-900, #222);
 }
 
 .card p {
-    color: var(--gray);
+    font-size: .95rem;
+    color: var(--gray-700, #444);
+    line-height: 1.45;
 }
 
-/* Responsive : 3 colonnes sur grand écran */
+/* --- Option A : hauteur fixe + recadrage propre (activée) --- */
+.card img {
+    width: 100%;
+    height: 220px;          /* même hauteur pour toutes */
+    object-fit: cover;      /* remplit sans déformer, recadre si besoin */
+    border-radius: 10px;
+    display: block;
+    background: #f4f4f4;
+}
+
+/* --- Option B : ratio constant (désactivée proprement) ---
+.card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+ */
+
+/* ou "contain" si tu veux tout voir
+
+border-radius: 10px;
+display: block;
+background: #f4f4f4;
+}
+*/
+
+.card .btn {
+    justify-self: start;
+}
+
+/* Grille responsive */
 @media (min-width: 720px) {
     .cards {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
-/* 2 colonnes sur tablette */
-@media (min-width: 600px) and (max-width: 719px) {
-    .cards {
-        grid-template-columns: repeat(2, 1fr);
+/* ================================
+   CONTACT (formulaire)
+   ================================ */
+form {
+    display: grid;
+    gap: 14px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+label {
+    font-weight: 600;
+    color: var(--gray-800, #333);
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: var(--radius, 6px);
+    border: 1px solid #ccc;
+    font: inherit;
+    background: #fff;
+    transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--emerald, #009688);
+    box-shadow: 0 0 0 2px rgba(0,150,136,.15);
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+form .btn-primary {
+    background: var(--orange, #e65100);
+    color: #fff;
+}
+
+form .btn-primary:hover {
+    background: #d84315;
+}
+
+form .btn-ghost {
+    border: 1px solid #ccc;
+}
+
+/* ================================
+   CV (listes & titres)
+   ================================ */
+.section ul {
+    padding-left: 1.2rem;
+    margin: .4rem 0;
+}
+
+.section ul li {
+    margin-bottom: 4px;
+}
+
+.section h2 {
+    margin-top: 1.4rem;
+    font-size: 1.2rem;
+    color: var(--gray-900, #222);
+}
+
+.section h3 {
+    font-size: 1rem;
+    color: var(--gray-800, #333);
+    margin-bottom: 4px;
+}
+
+/* ================================
+   Petits utilitaires page-level
+   ================================ */
+.center {
+    text-align: center;
+}
+
+.muted {
+    color: var(--gray, #777);
+}
+
+/* ================================
+   🌙 DARK MODE
+   Rend les textes lisibles sur fond sombre
+   ================================ */
+@media (prefers-color-scheme: dark) {
+
+    /* Corps de page */
+    body {
+        background: var(--dark, #121212);
+        color: #f2f2f2; /* texte principal clair */
+    }
+
+    /* Liens généraux */
+    a {
+        color: var(--orange, #ff7043);
+    }
+    a:hover {
+        color: #ffa270;
+    }
+
+    /* Topbar & Footer */
+    .topbar,
+    .site-footer {
+        background: #1c1c1c;
+        color: #f2f2f2;
+        border-color: #2b2b2b;
+    }
+
+    .brand {
+        color: #ffffff;
+    }
+
+    .main-nav a {
+        color: #f0f0f0;
+    }
+    .main-nav a:hover,
+    .main-nav a[aria-current="page"] {
+        color: var(--orange, #ff7043);
+    }
+
+    /* Icônes header */
+    .icon {
+        background: #2b2b2b;
+        color: #f5f5f5;
+    }
+    .icon:hover {
+        background: #3b3b3b;
+    }
+
+    /* Section HERO */
+    .hero {
+        background: #1e1e1e;
+        color: #ffffff;
+    }
+
+    .hero__content h1 {
+        color: #ffffff;
+    }
+
+    .hero__content .subtitle {
+        color: #dddddd;
+    }
+
+    .hero__content .btn-primary {
+        background: var(--orange, #ff7043);
+        color: #fff;
+    }
+
+    .hero__content .btn-primary:hover {
+        background: #ff8a50;
+    }
+
+    .hero .btn-ghost {
+        border: 1px solid rgba(255,255,255,.35);
+        color: #fff;
+    }
+
+    .hero .btn-ghost:hover {
+        background: rgba(255,255,255,.1);
+    }
+
+    /* Cartes projets */
+    .card {
+        background: #1a1a1a;
+        border-color: #2a2a2a;
+        box-shadow: none;
+    }
+
+    .card h3 {
+        color: #ffffff;
+    }
+
+    .card p {
+        color: #cccccc;
+    }
+
+    .card .btn.btn-ghost {
+        border: 1px solid #3a3a3a;
+        color: #ffffff;
+    }
+
+    .card .btn.btn-ghost:hover {
+        background: rgba(255,255,255,.08);
+    }
+
+    /* Formulaire contact */
+    label {
+        color: #ffffff;
+    }
+
+    input,
+    textarea {
+        background: #111111;
+        color: #eeeeee;
+        border: 1px solid #444;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+        color: #aaaaaa;
+    }
+
+    form .btn-primary {
+        background: var(--orange, #ff7043);
+        color: #fff;
+    }
+
+    form .btn-primary:hover {
+        background: #ff8a50;
+    }
+
+    form .btn-ghost {
+        border: 1px solid #555;
+        color: #f0f0f0;
+    }
+
+    /* Sections CV */
+    .section h2,
+    .section h3 {
+        color: #ffffff;
+    }
+
+    .section p,
+    .section li {
+        color: #e0e0e0;
+    }
+
+    .muted {
+        color: #bbbbbb;
     }
 }
+
