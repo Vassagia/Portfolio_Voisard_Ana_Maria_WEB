@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="236a0f59-0082-473f-8df0-69c704a1f90e" name="Changes" comment="style(projects): afficher les images entières dans les cartes projets (object-fit contain)">
+    <list default="true" id="236a0f59-0082-473f-8df0-69c704a1f90e" name="Changes" comment="test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/cv.html" beforeDir="false" afterPath="$PROJECT_DIR$/cv.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/projets.html" beforeDir="false" afterPath="$PROJECT_DIR$/projets.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +105,7 @@
       <workItem from="1761142301424" duration="9258000" />
       <workItem from="1761730272073" duration="17683000" />
       <workItem from="1761938806738" duration="2036000" />
-      <workItem from="1762344108742" duration="1448000" />
+      <workItem from="1762344108742" duration="2128000" />
     </task>
     <task id="LOCAL-00001" summary="chore: structure de base du projet (HTML/CSS/JS)">
       <option name="closed" value="true" />
@@ -215,7 +219,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761752455469</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="test">
+      <option name="closed" value="true" />
+      <created>1762346338008</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1762346338008</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,6 +259,7 @@
     <MESSAGE value="fix(projets): remplacer roles ARIA par balises sémantiques ul/li" />
     <MESSAGE value="fix(css): corriger commentaires imbriqués dans pages.css + nettoyages&#10;feat(theme): ajouter dark mode auto via prefers-color-scheme&#10;fix(theme): améliorer contrastes du dark mode pour meilleure lisibilité" />
     <MESSAGE value="style(projects): afficher les images entières dans les cartes projets (object-fit contain)" />
-    <option name="LAST_COMMIT_MESSAGE" value="style(projects): afficher les images entières dans les cartes projets (object-fit contain)" />
+    <MESSAGE value="test" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
   </component>
 </project>
