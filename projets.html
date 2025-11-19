@@ -5,23 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Projets — Portfolio Ana-Maria</title>
 
-    <link rel="stylesheet" href="src/assets/css/reset.css">
-    <link rel="stylesheet" href="src/assets/css/variables.css">
-    <link rel="stylesheet" href="src/assets/css/base.css">
-    <link rel="stylesheet" href="src/assets/css/layout.css">
-    <link rel="stylesheet" href="src/assets/css/pages.css">
+    <link rel="stylesheet" href="src/assets/css/reset.css" />
+    <link rel="stylesheet" href="src/assets/css/variables.css" />
+    <link rel="stylesheet" href="src/assets/css/base.css" />
+    <link rel="stylesheet" href="src/assets/css/layout.css" />
+    <link rel="stylesheet" href="src/assets/css/pages.css" />
 
     <style>
-        .cards{display:grid;gap:18px}
-        .card{
-            background:#fff;border:1px solid #e9e9e9;border-radius:12px;padding:16px;
-            display:grid;gap:10px
+        .cards {
+            display: grid;
+            gap: 18px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
         }
-        .card h3{margin:0}
-        .card img{border-radius:10px}
-        @media(min-width:720px){ .cards{grid-template-columns:repeat(3,1fr)} }
+
+        .card {
+            background: #fff;
+            border: 1px solid #e9e9e9;
+            border-radius: 12px;
+            padding: 16px;
+            display: grid;
+            gap: 10px;
+        }
+
+        .card h3 {
+            margin: 0;
+        }
+
+        .card img {
+            border-radius: 10px;
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        @media (min-width: 720px) {
+            .cards {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
     </style>
 </head>
+
 <body>
 <a class="skip-link" href="#contenu">Aller au contenu</a>
 
@@ -31,7 +57,7 @@
         <ul>
             <li><a href="index.html">Accueil</a></li>
             <li><a href="cv.html">CV</a></li>
-            <li><a aria-current="page" href="projets.html">Projets</a></li>
+            <li><a href="projets.html" aria-current="page">Projets</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
@@ -48,7 +74,7 @@
     <ul class="cards">
         <li>
             <article class="card">
-                <img src="src/assets/img/timehive.jpg" alt="Aperçu du projet 1">
+                <img src="src/assets/img/timehive.jpg" alt="Aperçu du projet TimeHive en C#" />
                 <h3>TimeHive (C#)</h3>
                 <p>Petit gestionnaire de tâches en console (priorités, échéances, export CSV).</p>
                 <a class="btn btn-ghost" href="#">Voir le code</a>
@@ -57,7 +83,7 @@
 
         <li>
             <article class="card">
-                <img src="src/assets/img/tricorder.jpg" alt="Aperçu du projet 2">
+                <img src="src/assets/img/tricorder.jpg" alt="Aperçu du Mini-Tricorder, capteur portable" />
                 <h3>Mini-Tricorder</h3>
                 <p>Capteur portable (CO₂, PM2.5, UV) avec affichage et log.</p>
                 <a class="btn btn-ghost" href="#">Détails</a>
@@ -66,19 +92,21 @@
 
         <li>
             <article class="card">
-                <img src="src/assets/img/cover.jpg" alt="Aperçu du projet 3">
+                <img src="src/assets/img/cover.jpg" alt="Aperçu du site portfolio web" />
                 <h3>Portfolio Web</h3>
                 <p>Ce site : HTML sémantique, variables CSS, responsive mobile-first.</p>
                 <a class="btn btn-ghost" href="index.html">Voir l’accueil</a>
             </article>
         </li>
     </ul>
-
 </main>
 
 <footer class="site-footer" role="contentinfo">
-    <p>&copy; <span id="annee"></span> Ana-Maria Voisard</p>
+    <p>&copy; <span id="annee"></span> Ana-Maria Voisard — Tous droits réservés</p>
 </footer>
-<script>document.getElementById('annee').textContent = new Date().getFullYear();</script>
+
+<script>
+    document.getElementById('annee').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
