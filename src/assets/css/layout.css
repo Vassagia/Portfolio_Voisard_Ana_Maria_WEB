@@ -1,4 +1,5 @@
-/* Topbar */
+/* Topbar ─────────────── */
+
 .topbar {
     display: flex;
     gap: var(--space-sm);
@@ -29,6 +30,8 @@
     gap: var(--space-sm);
 }
 
+/* Icônes sociales */
+
 .icon {
     width: 32px;
     height: 32px;
@@ -38,7 +41,6 @@
     border-radius: 50%;
     background: #efefef;
     text-decoration: none;
-    font-weight: 600;
     transition: background 0.2s ease;
 }
 
@@ -46,13 +48,20 @@
     background: #ddd;
 }
 
-/* HERO : grid mobile-first (pile) */
+.icon-img {
+    width: 18px;
+    height: 18px;
+    display: block;
+}
+
+/* ─────────────── Hero ─────────────── */
+
 .hero {
     display: grid;
     gap: var(--space);
     align-items: center;
     padding: var(--space-lg);
-    background: #2e2e2e;
+    background: var(--dark);
     color: #f2f2f2;
 }
 
@@ -88,7 +97,8 @@
     background: rgba(255, 255, 255, 0.1);
 }
 
-/* Section générique */
+/* ─────────────── Sections / Footer ─────────────── */
+
 .section {
     padding: var(--space-lg) var(--space);
 }
@@ -101,8 +111,9 @@
     border-top: 1px solid #e0e0e0;
 }
 
-/* ──────────────── Breakpoints ──────────────── */
-/* ≥600px : ajustements pour tablettes petites */
+/* ─────────────── Breakpoints ─────────────── */
+
+/* ≥600px : tablettes petites */
 @media (min-width: 600px) {
     .topbar {
         padding: var(--space) var(--space-lg);
