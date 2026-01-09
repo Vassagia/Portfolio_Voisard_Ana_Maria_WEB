@@ -1,19 +1,19 @@
 /* Topbar ─────────────── */
-
 .topbar {
     display: flex;
     gap: var(--space-sm);
     align-items: center;
     justify-content: space-between;
     padding: var(--space-sm) var(--space);
-    background: #fff;
-    border-bottom: 1px solid #eaeaea;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
     flex-wrap: wrap;
 }
 
 .brand {
     font-weight: 800;
     font-size: 1.1rem;
+    color: var(--heading);
 }
 
 .main-nav ul {
@@ -31,7 +31,6 @@
 }
 
 /* Icônes sociales */
-
 .icon {
     width: 32px;
     height: 32px;
@@ -39,13 +38,13 @@
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background: #efefef;
+    background: var(--icon-bg);
     text-decoration: none;
     transition: background 0.2s ease;
 }
 
 .icon:hover {
-    background: #ddd;
+    background: var(--icon-bg-hover);
 }
 
 .icon-img {
@@ -54,8 +53,7 @@
     display: block;
 }
 
-/* ─────────────── Hero ─────────────── */
-
+/* Hero ─────────────── */
 .hero {
     display: grid;
     gap: var(--space);
@@ -101,8 +99,7 @@
     background: rgba(255, 255, 255, 0.1);
 }
 
-/* ─────────────── Sections / Footer ─────────────── */
-
+/* Sections / Footer ─────────────── */
 .section {
     padding: var(--space-lg) var(--space);
 }
@@ -110,14 +107,12 @@
 .site-footer {
     padding: var(--space);
     text-align: center;
-    color: var(--gray);
-    background: #fafafa;
-    border-top: 1px solid #e0e0e0;
+    color: var(--subtitle);
+    background: var(--footer-bg);
+    border-top: 1px solid var(--border);
 }
 
-/* ─────────────── Breakpoints ─────────────── */
-
-/* ≥600px : tablettes petites */
+/* Breakpoints ─────────────── */
 @media (min-width: 600px) {
     .topbar {
         padding: var(--space) var(--space-lg);
@@ -132,7 +127,6 @@
     }
 }
 
-/* ≥768px : deux colonnes pour le hero */
 @media (min-width: 768px) {
     .hero {
         grid-template-columns: 1.1fr 1fr;
@@ -148,7 +142,6 @@
     }
 }
 
-/* ≥1024px : topbar plus aérée, hero optimisé */
 @media (min-width: 1024px) {
     .topbar {
         padding: var(--space-lg) var(--space-lg);
@@ -166,14 +159,13 @@
     }
 }
 
-/* ≥1440px : grand écran */
 @media (min-width: 1440px) {
     .hero {
         grid-template-columns: 1.2fr 1fr;
     }
 }
 
-/* ─────────────── Dark mode: icône GitHub lisible ─────────────── */
+/* Dark mode : icône GitHub lisible */
 @media (prefers-color-scheme: dark) {
     .icon-img--invert-dark {
         filter: invert(100%);

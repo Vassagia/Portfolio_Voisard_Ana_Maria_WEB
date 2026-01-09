@@ -1,19 +1,10 @@
-/* ─────────────────────────────────────────────
-   PAGES.CSS — styles spécifiques aux pages
-   Projet : Portfolio_Voisard_Ana_Maria_WEB
-   Dossiers : src/assets/css | src/assets/img | pages HTML à la racine
-   ─────────────────────────────────────────────
-   Chargement recommandé après : reset.css, variables.css,
-   base.css, layout.css
-   ───────────────────────────────────────────── */
-
 /* ================================
    ACCUEIL (hero)
    ================================ */
 .hero__content .btn { margin-right: 8px; }
 
 .hero__content .btn-primary {
-    background: var(--orange, #e65100);
+    background: var(--orange);
     color: #fff;
 }
 
@@ -22,7 +13,7 @@
 }
 
 /* ================================
-   PROJETS (cartes)
+   PROJETS (cartes) — uniformes
    ================================ */
 .cards {
     display: grid;
@@ -30,15 +21,28 @@
     list-style: none;
     padding: 0;
     margin: 0;
+    align-items: stretch;
 }
 
+@media (min-width: 720px) {
+    .cards { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* li s’étire */
+.cards > li { display: flex; }
+
+/* carte prend toute la hauteur */
 .card {
-    background: #fff;
-    border: 1px solid #e9e9e9;
+    flex: 1;
+    background: var(--surface);
+    border: 1px solid var(--border);
     border-radius: 12px;
     padding: 16px;
+
     display: grid;
     gap: 10px;
+    grid-template-rows: 220px auto 1fr auto; /* image fixe + bouton en bas */
+
     box-shadow: 0 2px 6px rgba(0,0,0,.04);
     transition: transform .2s ease, box-shadow .2s ease;
 }
@@ -51,34 +55,39 @@
 .card h3 {
     margin: 0;
     font-size: 1.1rem;
-    color: var(--gray-900, #222);
+    color: var(--heading);
 }
 
 .card p {
+    margin: 0;
     font-size: .95rem;
-    color: var(--gray-700, #444);
+    color: var(--text);
     line-height: 1.45;
 }
 
-.card img {
+/* Image fixe => cartes identiques */
+.card > img {
     width: 100%;
-    height: auto;
-    max-height: 250px;
+    height: 220px;
     object-fit: contain;
     border-radius: 10px;
     display: block;
-    background: #f4f4f4;
+    background: var(--surface-soft);
     padding: 6px;
 }
 
-.card .btn {
+/* Bouton / lien bouton en bas */
+.card > .btn,
+.card > button.btn {
+    margin-top: auto;
     justify-self: start;
+    text-decoration: none;
 }
 
-@media (min-width: 720px) {
-    .cards {
-        grid-template-columns: repeat(3, 1fr);
-    }
+/* Boutons désactivés cohérents */
+button:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
 }
 
 /* ================================
@@ -93,33 +102,32 @@ form {
 
 label {
     font-weight: 600;
-    color: var(--gray-800, #333);
+    color: var(--heading);
 }
 
 input,
 textarea {
     width: 100%;
     padding: 10px 12px;
-    border-radius: var(--radius, 6px);
-    border: 1px solid #ccc;
+    border-radius: var(--radius);
+    border: 1px solid var(--input-border);
     font: inherit;
-    background: #fff;
+    background: var(--input-bg);
+    color: var(--text);
     transition: border-color .2s ease, box-shadow .2s ease;
 }
 
 input:focus,
 textarea:focus {
-    border-color: var(--emerald, #009688);
+    border-color: var(--emerald);
     box-shadow: 0 0 0 2px rgba(0,150,136,.15);
     outline: none;
 }
 
-textarea {
-    resize: vertical;
-}
+textarea { resize: vertical; }
 
 form .btn-primary {
-    background: var(--orange, #e65100);
+    background: var(--orange);
     color: #fff;
 }
 
@@ -140,25 +148,21 @@ form .btn-primary:hover {
     margin: .4rem 0;
 }
 
-.section ul li {
-    margin-bottom: 4px;
-}
+.section ul li { margin-bottom: 4px; }
 
 .section h2 {
     margin-top: 1.4rem;
     font-size: 1.2rem;
-    color: var(--gray-900, #222);
+    color: var(--heading);
 }
 
 .section h3 {
     font-size: 1rem;
-    color: var(--gray-800, #333);
+    color: var(--heading);
     margin-bottom: 4px;
 }
 
-/* ================================
-   CV — texte justifié (uniquement sur écran large)
-   ================================ */
+/* CV — texte justifié (uniquement sur écran large) */
 @media (min-width: 768px) {
     body.cv .section p,
     body.cv .section li,
@@ -172,179 +176,5 @@ form .btn-primary:hover {
 /* ================================
    Utilitaires
    ================================ */
-.center {
-    text-align: center;
-}
-
-.muted {
-    color: var(--gray, #777);
-}
-
-/* ================================
-   🌙 DARK MODE
-   Lisibilité globale + composants
-   ================================ */
-@media (prefers-color-scheme: dark) {
-
-    /* ---------- Base globale ---------- */
-    body {
-        background: #121212;
-        color: #eaeaea;
-    }
-
-    /* ✅ FIX IMPORTANT : titres globaux + titres en section (spécificité) */
-    h1,
-    h2,
-    h3,
-    h4,
-    .section h2,
-    .section h3,
-    .section h4,
-    header.section h1,
-    header.section h2,
-    header.section h3 {
-        color: #ffffff;
-    }
-
-    /* Textes secondaires */
-    .subtitle { color: #cfcfcf; }
-    .muted { color: #bdbdbd; }
-
-    /* Liens */
-    a { color: #9be3d6; }
-    a:hover { color: var(--orange, #ff7043); }
-
-    /* ---------- Topbar / Footer ---------- */
-    .topbar,
-    .site-footer {
-        background: #1c1c1c;
-        color: #eaeaea;
-        border-color: #2a2a2a;
-    }
-
-    .brand { color: #ffffff; }
-
-    .main-nav a { color: #eaeaea; }
-    .main-nav a:hover,
-    .main-nav a[aria-current="page"] {
-        color: var(--orange, #ff7043);
-    }
-
-    /* Icônes header */
-    .icon { background: #333; }
-    .icon:hover { background: #444; }
-
-    /* Si tes SVG deviennent ternes, décommente ça :
-    .icon-img { filter: invert(1); }
-    */
-
-    /* ---------- HERO ---------- */
-    .hero {
-        background: #1f1f1f;
-        color: #eaeaea;
-    }
-
-    .hero__content .subtitle { color: #cfcfcf; }
-
-    .hero .btn-ghost {
-        border: 1px solid rgba(255,255,255,.35);
-        color: #ffffff;
-        background: transparent;
-    }
-
-    .hero .btn-ghost:hover {
-        background: rgba(255,255,255,.08);
-    }
-
-    .hero__content .btn-primary {
-        background: var(--orange, #ff7043);
-        color: #ffffff;
-    }
-
-    .hero__content .btn-primary:hover {
-        background: #ff8a50;
-    }
-
-    /* ---------- Cartes Projets ---------- */
-    .cards { background: transparent; }
-
-    .card {
-        background: #1e1e1e;
-        border: 1px solid #333;
-        color: #eaeaea;
-        box-shadow: none;
-    }
-
-    .card p { color: #cfcfcf; }
-
-    .card img {
-        background: #2a2a2a;
-        border-radius: 10px;
-    }
-
-    .card .btn.btn-ghost {
-        border: 1px solid #444;
-        background: transparent;
-        color: var(--orange, #ff7043);
-    }
-
-    .card .btn.btn-ghost:hover {
-        background: var(--orange, #ff7043);
-        color: #fff;
-    }
-
-    button[aria-disabled="true"] {
-        opacity: 0.55;
-        cursor: not-allowed;
-    }
-
-    /* ---------- Formulaire Contact ---------- */
-    label { color: #e6e6e6; }
-
-    input,
-    textarea {
-        background: #111;
-        color: #eee;
-        border: 1px solid #444;
-    }
-
-    input::placeholder,
-    textarea::placeholder {
-        color: #9e9e9e;
-    }
-
-    #confirmation { color: #cfcfcf; }
-}
-
-/* ===== FIX: Cartes projets mêmes hauteurs (light + dark) ===== */
-
-/* Le <li> devient un conteneur qui s'étire */
-.cards > li {
-    display: flex;
-}
-
-/* La carte remplit toute la hauteur disponible */
-.cards > li > .card {
-    flex: 1;
-    height: 100%;
-    display: grid;
-    grid-template-rows: auto auto 1fr auto; /* image, titre, texte, bouton */
-}
-
-/* Image: hauteur fixe pour uniformiser toutes les cartes */
-.cards > li > .card > img {
-    width: 100%;
-    height: 220px;        /* ajuste 200–260 selon ton goût */
-    object-fit: contain;  /* montre l'image entière */
-    background: #f4f4f4;
-    border-radius: 10px;
-    padding: 6px;
-    display: block;
-}
-
-/* Bouton toujours en bas */
-.cards > li > .card > .btn,
-.cards > li > .card > button.btn {
-    margin-top: auto;
-    justify-self: start;
-}
+.center { text-align: center; }
+.muted { color: var(--subtitle); }

@@ -12,8 +12,8 @@ body {
     min-height: 100%;
     margin: 0;
     font-family: var(--font-body), sans-serif;
-    background: var(--beige);
-    color: var(--dark);
+    background: var(--bg);
+    color: var(--text);
     line-height: 1.6;
 }
 
@@ -26,7 +26,7 @@ body {
 /* Titres */
 h1, h2, h3, h4 {
     font-family: var(--font-heading), sans-serif;
-    color: var(--dark);
+    color: var(--heading);
     margin-top: 0;
 }
 
@@ -41,7 +41,7 @@ h2 {
 }
 
 .subtitle {
-    color: var(--gray);
+    color: var(--subtitle);
     margin: 0.5rem 0 1rem;
 }
 
@@ -68,16 +68,16 @@ h2 {
 }
 
 .btn-ghost {
-    background: rgba(0, 0, 0, 0.05);
+    background: var(--btn-ghost-bg);
 }
 
 .btn-ghost:hover {
-    background: rgba(0, 0, 0, 0.1);
+    background: var(--btn-ghost-bg-hover);
 }
 
 /* Liens */
 a {
-    color: var(--emerald);
+    color: var(--link);
     text-decoration: none;
 }
 
@@ -85,9 +85,16 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Lien déjà visité (montre à ton formateur :hover / :visited) */
 a:visited {
-    color: var(--emerald-dark);
+    color: var(--link-visited);
+}
+
+/* IMPORTANT: un bouton-lien ne doit jamais être souligné */
+a.btn:hover,
+a.btn:visited,
+a.icon:hover,
+a.icon:visited {
+    text-decoration: none;
 }
 
 /* Accessibilité : focus visible (clavier) */
@@ -96,7 +103,7 @@ a:visited {
     outline-offset: 2px;
 }
 
-/* Lien d’évitement (skip-link) */
+/* Skip-link */
 .skip-link {
     position: absolute;
     left: -9999px;
@@ -120,7 +127,7 @@ a:visited {
     font-weight: 600;
 }
 
-/* Texte seulement pour lecteurs d’écran */
+/* Texte seulement lecteurs d’écran */
 .sr-only {
     position: absolute;
     width: 1px;
