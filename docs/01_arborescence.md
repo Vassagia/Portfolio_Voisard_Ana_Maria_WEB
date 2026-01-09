@@ -1,48 +1,91 @@
-# Arborescence du projet Portfolio Ana-Maria WEB
+# Arborescence du projet — Portfolio Ana-Maria WEB
 
 Ce document décrit la structure complète du projet.  
-Il sert de **référence** pour savoir où se trouvent les fichiers,  
-et à quoi sert chaque dossier.
+Il sert de **référence** pour retrouver les fichiers et comprendre le rôle de chaque dossier.
 
 ---
 
-##  Structure générale du projet
+## Structure générale
+
+Portfolio_Voisard_Ana_Maria_WEB/
+├─ .idea/
+│ ├─ inspectionProfiles/
+│ ├─ vcs.xml
+│ └─ workspace.xml
+├─ docs/
+│ ├─ M_00_intro.md
+│ ├─ M_01_arborescence.md
+│ ├─ M_02_commits.md
+│ ├─ M_03_css.md
+│ ├─ M_04_bugs_et_solutions.md
+│ └─ M_05_checklist_projet.md
+├─ src/
+│ └─ assets/
+│ ├─ css/
+│ │ ├─ base.css
+│ │ ├─ layout.css
+│ │ ├─ pages.css
+│ │ ├─ reset.css
+│ │ └─ variables.css
+│ ├─ fonts/
+│ │ ├─ inter-v20-latin-700.woff2
+│ │ └─ inter-v20-latin-regular.woff2
+│ ├─ icons/
+│ │ ├─ github.svg
+│ │ └─ linkedin.svg
+│ └─ img/
+│ ├─ cover.jpg
+│ ├─ landing.jpg
+│ ├─ timehive.jpg
+│ └─ tricorder.jpg
+├─ .gitignore
+├─ contact.html
+├─ cv.html
+├─ index.html
+├─ projets.html
+└─ README.md
 
 
 ---
 
-##  Détail dossier par dossier
+## Détail dossier par dossier
 
-###  `.idea/`
-> Dossier **automatique créé par WebStorm**  
-Il contient la configuration du projet (emplacement des fichiers, paramètres Git, thèmes, etc.)  
- **À ne pas modifier manuellement.**
-
----
+### `.idea/`
+Dossier automatique créé par WebStorm.  
+Contient la configuration de l’IDE (projet, VCS, préférences).  
+**À ne pas modifier manuellement**.
 
 ### `docs/`
-> Dossier de **documentation personnelle**  
-Contient toutes les notes, explications, historiques et suivis du projet.
+Documentation du projet:
+- `M_00_intro.md` : présentation du projet
+- `M_01_arborescence.md` : structure complète (ce fichier)
+- `M_02_commits.md` : suivi de l’historique Git
+- `M_03_css.md` : organisation CSS + bonnes pratiques
+- `M_04_bugs_et_solutions.md` : problèmes rencontrés + correctifs
+- `M_05_checklist_projet.md` : checklist d’auto-évaluation
 
-**Sous-fichiers actuels :**
-- `00_intro.md` → présentation du projet
-- `01_arborescence.md` → structure du projet *(ce fichier)*
-- `02_commits.md` → historique logique des commits
-- `03_css.md` → détails des fichiers de style
-- `04_bugs_et_solutions.md` → problèmes rencontrés et leurs solutions
+### `src/assets/css/`
+Feuilles de style du site :
+- `reset.css` : base neutre navigateur
+- `variables.css` : polices locales + variables (couleurs, espaces, radius)
+- `base.css` : typographie, boutons, liens, accessibilité
+- `layout.css` : structure générale + responsive
+- `pages.css` : styles spécifiques (projets/contact/CV) + dark mode
 
- **But :** tout noter pour pouvoir se retrouver plus tard.
+### `src/assets/fonts/`
+Polices locales (Inter):
+- regular 400
+- bold 700
 
----
+### `src/assets/icons/`
+Icônes SVG (LinkedIn / GitHub).
 
-### `src/`
-> Dossier **principal du code source**.  
-Tout ce qui sert à construire le site web se trouve ici.
+### `src/assets/img/`
+Images utilisées (hero + projets).
 
-####  `src/pages/`
-Contient les pages HTML visibles par l’utilisateur :
-index.html → page d’accueil
-
-cv.html (plus tard) → page de présentation
-
-contact.html (plus tard) → page de contact
+### Pages HTML (racine)
+Les pages visibles par l’utilisateur sont à la racine du projet:
+- `index.html`
+- `cv.html`
+- `projets.html`
+- `contact.html`

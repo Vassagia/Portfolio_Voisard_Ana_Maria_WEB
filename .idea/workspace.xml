@@ -4,11 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="236a0f59-0082-473f-8df0-69c704a1f90e" name="Changes" comment="feat(css): ajout des polices locales Inter et mise en place des variables globales">
+    <list default="true" id="236a0f59-0082-473f-8df0-69c704a1f90e" name="Changes" comment="feat(icons): ajout des icônes LinkedIn et GitHub en SVG">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cv.html" beforeDir="false" afterPath="$PROJECT_DIR$/cv.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/00_intro.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/00_intro.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/01_arborescence.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/01_arborescence.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/03_css.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/03_css.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/base.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projets.html" beforeDir="false" afterPath="$PROJECT_DIR$/projets.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/css/layout.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/layout.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/css/pages.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/pages.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +115,9 @@
       <workItem from="1761938806738" duration="2036000" />
       <workItem from="1762344108742" duration="2616000" />
       <workItem from="1762949608047" duration="1754000" />
-      <workItem from="1763552333239" duration="8582000" />
+      <workItem from="1763552333239" duration="8905000" />
+      <workItem from="1764158850417" duration="3741000" />
+      <workItem from="1767959962093" duration="6507000" />
     </task>
     <task id="LOCAL-00001" summary="chore: structure de base du projet (HTML/CSS/JS)">
       <option name="closed" value="true" />
@@ -271,7 +279,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763558436376</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="feat(icons): ajout des icônes LinkedIn et GitHub en SVG">
+      <option name="closed" value="true" />
+      <created>1763563689752</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1763563689752</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -336,6 +352,7 @@
     <MESSAGE value="style: correction d'espacements variables et layout" />
     <MESSAGE value="style: correction d'espacements variables et layout&#10;chore: suppression header et footer dynamique, ajout en statique sur chaque page" />
     <MESSAGE value="feat(css): ajout des polices locales Inter et mise en place des variables globales" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(css): ajout des polices locales Inter et mise en place des variables globales" />
+    <MESSAGE value="feat(icons): ajout des icônes LinkedIn et GitHub en SVG" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(icons): ajout des icônes LinkedIn et GitHub en SVG" />
   </component>
 </project>
