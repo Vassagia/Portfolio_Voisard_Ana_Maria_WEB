@@ -23,16 +23,11 @@
 
 /* ================================
    PROJETS (cartes)
-   HTML cible (projets.html) :
-   <ul class="cards">
-     <li><article class="card">…</article></li>
-     …
-   </ul>
    ================================ */
 .cards {
     display: grid;
     gap: 18px;
-    list-style: none;   /* ul sans puces */
+    list-style: none;
     padding: 0;
     margin: 0;
 }
@@ -65,32 +60,21 @@
     line-height: 1.45;
 }
 
-/* --- Option A : hauteur fixe + recadrage propre (activée) --- */
 .card img {
     width: 100%;
-    height: auto;           /* hauteur s’adapte à la largeur */
-    max-height: 250px;      /* limite la taille pour garder une grille harmonieuse */
-    object-fit: contain;    /* montre l’image entière sans recadrer */
+    height: auto;
+    max-height: 250px;
+    object-fit: contain;
     border-radius: 10px;
     display: block;
-    background: #f4f4f4;    /* fond neutre visible si l’image ne remplit pas tout */
-    padding: 6px;           /* petit cadre autour de l’image */
+    background: #f4f4f4;
+    padding: 6px;
 }
 
-/* --- Option B : ratio constant (désactivée proprement) ---
-.card img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-}
-*/
-
-/* Bouton dans les cartes */
 .card .btn {
     justify-self: start;
 }
 
-/* Grille responsive */
 @media (min-width: 720px) {
     .cards {
         grid-template-columns: repeat(3, 1fr);
@@ -143,7 +127,6 @@ form .btn-primary:hover {
     background: #d84315;
 }
 
-/* Message de confirmation sous le formulaire */
 #confirmation {
     margin-top: 4px;
     font-size: 0.95rem;
@@ -187,7 +170,7 @@ form .btn-primary:hover {
 }
 
 /* ================================
-   Petits utilitaires page-level
+   Utilitaires
    ================================ */
 .center {
     text-align: center;
@@ -206,12 +189,22 @@ form .btn-primary:hover {
     /* ---------- Base globale ---------- */
     body {
         background: #121212;
-        color: #eaeaea; /* texte principal */
+        color: #eaeaea;
     }
 
-    /* Titres : lisibles sans être “néon blanc” */
-    h1 { color: #ffffff; }
-    h2, h3, h4 { color: #e6e6e6; }
+    /* ✅ FIX IMPORTANT : titres globaux + titres en section (spécificité) */
+    h1,
+    h2,
+    h3,
+    h4,
+    .section h2,
+    .section h3,
+    .section h4,
+    header.section h1,
+    header.section h2,
+    header.section h3 {
+        color: #ffffff;
+    }
 
     /* Textes secondaires */
     .subtitle { color: #cfcfcf; }
@@ -251,7 +244,6 @@ form .btn-primary:hover {
         color: #eaeaea;
     }
 
-    .hero__content h1 { color: #ffffff; }
     .hero__content .subtitle { color: #cfcfcf; }
 
     .hero .btn-ghost {
@@ -283,7 +275,6 @@ form .btn-primary:hover {
         box-shadow: none;
     }
 
-    .card h3 { color: #ffffff; }
     .card p { color: #cfcfcf; }
 
     .card img {
@@ -291,7 +282,6 @@ form .btn-primary:hover {
         border-radius: 10px;
     }
 
-    /* Boutons dans cartes */
     .card .btn.btn-ghost {
         border: 1px solid #444;
         background: transparent;
@@ -303,7 +293,6 @@ form .btn-primary:hover {
         color: #fff;
     }
 
-    /* Boutons “désactivés” (tes button aria-disabled=true) */
     button[aria-disabled="true"] {
         opacity: 0.55;
         cursor: not-allowed;
@@ -326,4 +315,3 @@ form .btn-primary:hover {
 
     #confirmation { color: #cfcfcf; }
 }
-
