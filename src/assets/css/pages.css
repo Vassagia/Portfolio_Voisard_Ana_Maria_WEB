@@ -178,3 +178,71 @@ form .btn-primary:hover {
    ================================ */
 .center { text-align: center; }
 .muted { color: var(--subtitle); }
+
+/* ================================
+   FIX HOVER BOUTONS (partout)
+   À coller tout en bas de pages.css
+   ================================ */
+
+/* Évite le soulignement des liens-boutons */
+a.btn:hover,
+a.btn:focus-visible {
+    text-decoration: none;
+}
+
+/* Hover "visible" (mouvement + ombre légère) */
+.btn {
+    transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.10);
+}
+
+.btn:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+/* Ghost en mode clair (plus contrasté) */
+.btn-ghost {
+    border-color: rgba(0,0,0,0.18);
+}
+
+.btn-ghost:hover {
+    background: rgba(0,0,0,0.10);
+    border-color: rgba(0,0,0,0.28);
+}
+
+/* Ghost dans le HERO (fond sombre): hover bien visible */
+.hero .btn-ghost {
+    background: transparent;
+    border-color: rgba(255,255,255,0.35);
+    color: #fff;
+}
+
+.hero .btn-ghost:hover {
+    background: rgba(255,255,255,0.14);
+    border-color: rgba(255,255,255,0.60);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+
+/* Mode sombre: ghost hors hero reste lisible et hover visible */
+@media (prefers-color-scheme: dark) {
+    .btn:hover {
+        box-shadow: 0 10px 22px rgba(0,0,0,0.35);
+    }
+
+    .btn-ghost {
+        background: rgba(255,255,255,0.06);
+        border-color: rgba(255,255,255,0.18);
+        color: #fff;
+    }
+
+    .btn-ghost:hover {
+        background: rgba(255,255,255,0.12);
+        border-color: rgba(255,255,255,0.35);
+    }
+}
+
