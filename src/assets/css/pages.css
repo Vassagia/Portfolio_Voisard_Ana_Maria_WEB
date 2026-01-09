@@ -315,3 +315,36 @@ form .btn-primary:hover {
 
     #confirmation { color: #cfcfcf; }
 }
+
+/* ===== FIX: Cartes projets mêmes hauteurs (light + dark) ===== */
+
+/* Le <li> devient un conteneur qui s'étire */
+.cards > li {
+    display: flex;
+}
+
+/* La carte remplit toute la hauteur disponible */
+.cards > li > .card {
+    flex: 1;
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto auto 1fr auto; /* image, titre, texte, bouton */
+}
+
+/* Image: hauteur fixe pour uniformiser toutes les cartes */
+.cards > li > .card > img {
+    width: 100%;
+    height: 220px;        /* ajuste 200–260 selon ton goût */
+    object-fit: contain;  /* montre l'image entière */
+    background: #f4f4f4;
+    border-radius: 10px;
+    padding: 6px;
+    display: block;
+}
+
+/* Bouton toujours en bas */
+.cards > li > .card > .btn,
+.cards > li > .card > button.btn {
+    margin-top: auto;
+    justify-self: start;
+}
