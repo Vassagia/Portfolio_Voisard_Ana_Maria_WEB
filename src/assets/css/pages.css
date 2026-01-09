@@ -209,6 +209,20 @@ form .btn-primary:hover {
         color: #f5f5f5;
     }
 
+    /* ✅ TITRES (FIX: visibilité H1/H2/H3 partout) */
+    h1, h2, h3, h4 {
+        color: #ffffff;
+    }
+
+    /* Textes secondaires */
+    .subtitle {
+        color: #dddddd;
+    }
+
+    .muted {
+        color: #bbbbbb;
+    }
+
     /* Topbar & footer */
     .topbar,
     .site-footer {
@@ -224,6 +238,7 @@ form .btn-primary:hover {
     .main-nav a {
         color: #eaeaea;
     }
+
     .main-nav a:hover,
     .main-nav a[aria-current="page"] {
         color: var(--orange, #ff7043);
@@ -232,8 +247,8 @@ form .btn-primary:hover {
     /* Icônes header */
     .icon {
         background: #333;
-        color: #fff;
     }
+
     .icon:hover {
         background: #444;
     }
@@ -243,9 +258,11 @@ form .btn-primary:hover {
         background: #1f1f1f;
         color: #ffffff;
     }
+
     .hero__content h1 {
         color: #ffffff;
     }
+
     .hero__content .subtitle {
         color: #dddddd;
     }
@@ -254,6 +271,7 @@ form .btn-primary:hover {
         background: var(--orange, #ff7043);
         color: #ffffff;
     }
+
     .hero__content .btn-primary:hover {
         background: #ff8a50;
     }
@@ -262,6 +280,7 @@ form .btn-primary:hover {
         border: 1px solid rgba(255,255,255,.4);
         color: #ffffff;
     }
+
     .hero .btn-ghost:hover {
         background: rgba(255,255,255,.1);
     }
@@ -272,7 +291,7 @@ form .btn-primary:hover {
     }
 
     .card {
-        background: #1e1e1e !important;  /* forcé pour éviter blanc sur blanc */
+        background: #1e1e1e;
         border: 1px solid #333;
         color: #f5f5f5;
         box-shadow: none;
@@ -291,20 +310,14 @@ form .btn-primary:hover {
         border-radius: 10px;
     }
 
-    .card .btn {
-        border-radius: 6px;
-        padding: 8px 14px;
-        font-weight: 600;
-    }
-
     .card .btn.btn-ghost {
         border: 1px solid #444;
         background: transparent;
-        color: #ff7043; /* bouton accent orange */
+        color: var(--orange, #ff7043);
     }
 
     .card .btn.btn-ghost:hover {
-        background: #ff7043;
+        background: var(--orange, #ff7043);
         color: #fff;
     }
 
@@ -323,29 +336,5 @@ form .btn-primary:hover {
     input::placeholder,
     textarea::placeholder {
         color: #aaaaaa;
-    }
-
-    form .btn-primary {
-        background: var(--orange, #ff7043);
-        color: #fff;
-    }
-
-    form .btn-primary:hover {
-        background: #ff8a50;
-    }
-
-    /* === SECTIONS CV === */
-    .section h2,
-    .section h3 {
-        color: #ffffff;
-    }
-
-    .section p,
-    .section li {
-        color: #e0e0e0;
-    }
-
-    .muted {
-        color: #bbbbbb;
     }
 }
