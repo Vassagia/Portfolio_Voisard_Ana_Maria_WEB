@@ -10,44 +10,14 @@
     <link rel="stylesheet" href="src/assets/css/base.css" />
     <link rel="stylesheet" href="src/assets/css/layout.css" />
     <link rel="stylesheet" href="src/assets/css/pages.css" />
-
-    <style>
-        form {
-            display: grid;
-            gap: 14px;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        label {
-            font-weight: 600;
-        }
-
-        input,
-        textarea {
-            width: 100%;
-            padding: 10px 12px;
-            border-radius: var(--radius);
-            border: 1px solid #ccc;
-            font: inherit;
-        }
-
-        textarea {
-            resize: vertical;
-        }
-
-        #confirmation {
-            margin-top: 4px;
-            font-size: 0.95rem;
-        }
-    </style>
 </head>
 
 <body>
 <a class="skip-link" href="#contenu">Aller au contenu</a>
 
-<header class="topbar" role="banner">
+<header class="topbar">
     <div class="brand">Ana-Maria Voisard</div>
+
     <nav class="main-nav" aria-label="Navigation principale">
         <ul>
             <li><a href="index.html">Accueil</a></li>
@@ -56,9 +26,15 @@
             <li><a href="contact.html" aria-current="page">Contact</a></li>
         </ul>
     </nav>
+
     <div class="actions">
-        <a class="icon" href="https://www.linkedin.com/in/anamaria-voisard/" aria-label="LinkedIn">in</a>
-        <a class="icon" href="https://github.com/Vassagia" aria-label="GitHub">gh</a>
+        <a class="icon" href="https://www.linkedin.com/in/anamaria-voisard/" aria-label="LinkedIn">
+            <img src="src/assets/icons/linkedin.svg" alt="" class="icon-img">
+        </a>
+
+        <a class="icon" href="https://github.com/Vassagia" aria-label="GitHub">
+            <img src="src/assets/icons/github.svg" alt="" class="icon-img icon-img--invert-dark">
+        </a>
     </div>
 </header>
 
@@ -66,7 +42,7 @@
     <h1>Contact</h1>
     <p class="subtitle">N’hésitez pas à me laisser un message via le formulaire ci-dessous :</p>
 
-    <form id="contact-form" action="#" method="post" novalidate>
+    <form id="contact-form" action="#" method="post">
         <div>
             <label for="nom">Nom</label>
             <input id="nom" name="nom" type="text" placeholder="Votre nom" required />
@@ -95,26 +71,23 @@
         </div>
 
         <button class="btn btn-primary" type="submit">Envoyer</button>
-        <button class="btn btn-ghost" type="reset">Effacer</button>
 
         <p id="confirmation" aria-live="polite"></p>
     </form>
 </main>
 
-<footer class="site-footer" role="contentinfo">
+<footer class="site-footer">
     <p>&copy; <span id="annee"></span> Ana-Maria Voisard — Tous droits réservés</p>
 </footer>
 
 <script>
     document.getElementById('annee').textContent = new Date().getFullYear();
 
-    document
-        .getElementById('contact-form')
-        .addEventListener('submit', function (e) {
-            e.preventDefault();
-            document.getElementById('confirmation').textContent =
-                "Merci pour votre message (simulation locale).";
-        });
+    document.getElementById('contact-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+        document.getElementById('confirmation').textContent =
+            "Merci pour votre message (simulation locale).";
+    });
 </script>
 </body>
 </html>

@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="src/assets/css/pages.css" />
 </head>
 
-<body>
+<body class="cv">
 <a class="skip-link" href="#contenu">Aller au contenu</a>
 
 <header class="topbar" role="banner">
@@ -28,62 +28,105 @@
     </nav>
 
     <div class="actions">
-        <a class="icon" href="https://www.linkedin.com/in/anamaria-voisard/" aria-label="LinkedIn">in</a>
-        <a class="icon" href="https://github.com/Vassagia" aria-label="GitHub">gh</a>
+        <a class="icon" href="https://www.linkedin.com/in/anamariavoisard" aria-label="LinkedIn">
+            <img src="src/assets/icons/linkedin.svg" alt="" class="icon-img">
+        </a>
+
+        <a class="icon" href="https://github.com/Vassagia" aria-label="GitHub">
+            <img src="src/assets/icons/github.svg" alt="" class="icon-img icon-img--invert-dark">
+        </a>
     </div>
 </header>
 
 <main id="contenu" class="container">
     <header class="section">
         <h1>Curriculum Vitæ</h1>
-        <p class="subtitle">Informaticienne de gestion — ESIG</p>
+        <p class="subtitle">Informaticienne de gestion (en formation) — ESIG Delémont</p>
+
+        <p class="muted">
+            Develier, Jura (Suisse) · Permis B · Disponible
+        </p>
+
+        <p>
+            <strong>Contact :</strong>
+            <a href="https://www.linkedin.com/in/anamariavoisard">LinkedIn</a>
+        </p>
     </header>
 
     <section class="section" aria-labelledby="profil">
         <h2 id="profil">Profil</h2>
         <p>
-            Étudiante en informatique de gestion à l’ESIG, passionnée par la technologie,
-            la production, la gestion et l’amélioration continue. Expérience en
-            micro-électronique et en management d’équipe.
+            Informaticienne de gestion en formation, adaptable et motivée, je souhaite m’investir dans un poste
+            alliant support technique, intervention sur le terrain et accompagnement utilisateur. Autodidacte,
+            je développe mes compétences via un laboratoire de test à domicile pour être rapidement opérationnelle.
+            Rigoureuse, à l’écoute et mobile, j’apporte fiabilité, réactivité, sens du service et de l’analyse.
         </p>
     </section>
 
     <section class="section" aria-labelledby="competences">
         <h2 id="competences">Compétences</h2>
         <ul>
-            <li><strong>Langages :</strong> HTML, CSS, C#</li>
-            <li><strong>Outils :</strong> WebStorm, Git, GitHub, Visual Studio</li>
-            <li><strong>Transversales :</strong> Organisation, communication, leadership</li>
+            <li><strong>Informatique & systèmes :</strong> Windows (installation, configuration, support), Office 365, Active Directory (bases), SAP (bases), gestion documentaire, support de premier niveau.</li>
+            <li><strong>Technique & amélioration :</strong> contrôle qualité, maintenance sur machine, amélioration de processus, installation/configuration matériel, dépannage bureautique.</li>
+            <li><strong>Support & communication :</strong> accompagnement utilisateurs, documentation technique, pédagogie, résolution de problèmes, communication claire (FR/EN).</li>
+            <li><strong>Organisation & gestion :</strong> planification, coordination, autonomie, sens du service.</li>
         </ul>
     </section>
 
-    <section class="section" aria-labelledby="experiences">
-        <h2 id="experiences">Expériences</h2>
+    <section class="section" aria-labelledby="experience">
+        <h2 id="experience">Expérience professionnelle</h2>
 
-        <article>
-            <h3>Responsable de secteur — Turck / duotec operations SA (Delémont)</h3>
-            <p>
-                Encadrement d’équipe, suivi qualité, gestion des indicateurs de production
-                et mise en place d’actions d’amélioration continue (Lean management).
-            </p>
+        <article class="section" aria-labelledby="exp-duotec">
+            <h3 id="exp-duotec">Responsable de secteur — duotec Group, Delémont <span class="muted">(04/2022 – 10/2024)</span></h3>
+            <ul>
+                <li>Gestion de la production et rôle de référente Qualité.</li>
+                <li>Management d’équipe (planification, formation, suivi). <span class="muted">(jusqu’à 12 personnes)</span></li>
+                <li>Utilisation quotidienne de SAP (suivi, planification, tableaux de bord, KPI).</li>
+                <li>Formation des collaborateurs aux outils numériques et soutien technique de premier niveau (machines, logiciels internes).</li>
+            </ul>
         </article>
 
-        <article>
-            <h3>Gérante — Bar Le Sauvage (Courtételle)</h3>
-            <p>
-                Gestion d’un établissement public : équipe, budget, fournisseurs,
-                organisation d’événements et fidélisation de la clientèle.
-            </p>
+        <article class="section" aria-labelledby="exp-bar">
+            <h3 id="exp-bar">Gérante — Bar Le Sauvage, Courtételle <span class="muted">(2012 – 2025)</span></h3>
+            <ul>
+                <li>Gestion complète de l’établissement et du personnel (organisation, coordination, service).</li>
+                <li>Analyse des résultats de vente et mise en place d’actions commerciales.</li>
+                <li>Relation client et fidélisation via une qualité de service reconnue.</li>
+            </ul>
+        </article>
+
+        <article class="section" aria-labelledby="exp-operatrice">
+            <h3 id="exp-operatrice">Opératrice spécialisée — duotec Group, Delémont <span class="muted">(03/2018 – 03/2022)</span></h3>
+            <ul>
+                <li>Contrôle qualité et reporting, documentation technique.</li>
+                <li>Maintenance préventive, diagnostic de base et dépannage technique.</li>
+                <li>Utilisation d’équipements techniques spécialisés (références IPC-A-610).</li>
+            </ul>
         </article>
     </section>
 
-    <section class="section" aria-labelledby="formations">
-        <h2 id="formations">Formations</h2>
+    <section class="section" aria-labelledby="formation">
+        <h2 id="formation">Formation</h2>
         <ul>
-            <li><strong>ESIG —</strong> Informatique de gestion (2024– )</li>
-            <li><strong>ASFC —</strong> Leadership &amp; Management (2024–2026)</li>
-            <li><strong>IPC-A-610 —</strong> Microélectronique (2023)</li>
+            <li><strong>ESIG Delémont —</strong> Informaticienne de gestion <span class="muted">(en cours)</span></li>
+            <li><strong>ASFC —</strong> Brevet fédéral Leadership &amp; Management <span class="muted">(en cours du soir, 2e année)</span></li>
+            <li><strong>Gymnase du soir — Lausanne —</strong> Maturité gymnasiale <span class="muted">(2015 – 2021)</span></li>
         </ul>
+    </section>
+
+    <section class="section" aria-labelledby="langues">
+        <h2 id="langues">Langues</h2>
+        <ul>
+            <li>Français : bilingue</li>
+            <li>Anglais : bilingue</li>
+            <li>Roumain : langue maternelle</li>
+            <li>Allemand : notions</li>
+        </ul>
+    </section>
+
+    <section class="section" aria-labelledby="interets">
+        <h2 id="interets">Centres d’intérêt</h2>
+        <p>Informatique (laboratoire de test personnel), technologies nouvelles, sciences, lecture, gastronomie.</p>
     </section>
 </main>
 
