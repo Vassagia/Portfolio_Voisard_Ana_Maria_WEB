@@ -87,6 +87,10 @@
     margin-bottom: var(--space);
 }
 
+.hero .subtitle {
+    color: rgba(255, 255, 255, 0.78);
+}
+
 .hero .btn-ghost {
     border: 1px solid rgba(255, 255, 255, 0.35);
     color: #fff;
@@ -166,5 +170,12 @@
 @media (min-width: 1440px) {
     .hero {
         grid-template-columns: 1.2fr 1fr;
+    }
+}
+
+/* ─────────────── Dark mode: icône GitHub lisible ─────────────── */
+@media (prefers-color-scheme: dark) {
+    .icon-img--invert-dark {
+        filter: invert(100%);
     }
 }
