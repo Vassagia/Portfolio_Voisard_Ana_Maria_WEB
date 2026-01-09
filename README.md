@@ -1,150 +1,151 @@
-# Mon Projet Web — Portfolio Ana-Maria
+# Projet personnel — Portfolio Ana-Maria (Module 113)
+
+Site personnel réalisé en **HTML5 + CSS3**, versionné avec **Git/GitHub** et publié via **GitHub Pages**.  
+Objectif: présenter mon profil, mon CV et quelques projets.
+
+- **Site en ligne**: https://vassagia.github.io/Portfolio_Voisard_Ana_Maria_WEB/
+- **Dépôt GitHub**: https://github.com/Vassagia/Portfolio_Voisard_Ana_Maria_WEB
 
 ---
 
-## 1. Présentation du projet
+## 1) Concept, public cible, objectifs
 
 ### Concept
-- **Thème choisi :** Portfolio personnel / site de présentation.
-- **Public cible :** Recruteurs, formateurs, collaborateurs ou partenaires souhaitant découvrir mon profil.
-- **Objectifs du site :**
-    - Créer mon premier site web complet en HTML5/CSS3.
-    - Mettre en pratique la sémantique, les variables CSS et le responsive design.
-    - Apprendre à utiliser Git et WebStorm dans un vrai projet.
+Un portfolio clair, accessible et responsive, orienté “profil + preuves” (CV + projets), avec un style sobre et une identité couleur cohérente (émeraude/orange).
 
-### Fonctionnalités prévues
-- **Navigation :** menu principal dans le header (Accueil, CV, Contact).
-- **Sections principales :** Hero (photo + présentation), À propos, CV, Contact.
-- **Contenus proposés :** texte de présentation, photo personnelle, liens LinkedIn/GitHub, bouton contact.
+### Public cible
+- Recruteurs / entreprises (stage, apprentissage, premier emploi)
+- Enseignant (validation des exigences techniques)
+- Toute personne voulant consulter mon profil rapidement
 
----
-
-## 2.  Parcours d'apprentissage
-
-### Ressources utilisées
-- **Plateformes :** OpenClassrooms, freeCodeCamp.
-- **Tutoriels suivis :** cours ESIG HTML/CSS, vidéos “Flexbox Crash Course”, “Responsive Web Design” (freeCodeCamp).
-- **Documentation :** GitHub Docs.
-
-### Progression
-| Semaine | Objectif | État        |
-|:--|:--|:------------|
-| 4 | Création de l’arborescence du projet et initialisation Git | ok          |
-| 6 | Création de la structure HTML5 et du contenu principal | ok          |
-| 8 | Mise en forme CSS de base + variables + reset | ok          |
-| 10 | Layout (Flexbox / Grid) et responsive design mobile-first |  En cours |
-| 11 | Accessibilité et compatibilité navigateurs | ☐ À faire   |
-| 12 | Tests, validation W3C et documentation finale | ☐ À faire   |
+### Objectifs
+- Mettre en pratique **structure HTML sémantique**, **CSS moderne** (Grid/Flex), **responsive mobile-first**
+- Démontrer une organisation propre du projet (assets locaux, CSS structuré, commits)
+- Valider la qualité (W3C, accessibilité, performance)
 
 ---
 
-## 3.  Outils et méthodologie
+## 2) Pages du site (à la racine)
 
-### Environnement de travail
-- **IDE :** WebStorm
-- **Navigateurs de test :** Chrome, Firefox, Edge
-- **Versioning :** Git + GitHub
-- **Validation :** W3C Validator, PageSpeed Insights, Wave Accessibility
-
-### Méthodologie
-- Développement **mobile-first**
-- Commits réguliers et messages clairs (selon convention *feat/style/fix/docs*)
-- Tests fréquents sur différents écrans
-- Documentation continue dans `/docs/`
-
-### Choix de design
-- **Palette de couleurs :**
-    - Couleur principale : `#006d5b` — vert émeraude
-    - Couleur secondaire : `#ff4500` — orange feu
-    - Couleur d’accent : `#f5f5f0` — beige clair
-    - Couleur de texte : `#2e2e2e` — gris foncé
-    - Couleur de fond : `#f5f5f0`
-- **Lien vers palette générée :** [coolors.co](https://coolors.co/)
-- **Typographies :**
-    - Titres : *Poppins* ou *Segoe UI Semibold*
-    - Texte : *Roboto*, *system-ui*
+- `index.html` : Accueil (Hero + section “À propos”)
+- `cv.html` : CV (profil, compétences, expériences, formations, langues, intérêts)
+- `projets.html` : Projets sous forme de cartes (liens vers GitHub)
+- `contact.html` : Formulaire de contact (simulation locale)
 
 ---
 
-## 4.  Tests et validation
+## 3) Structure du projet
 
-### Validation technique
-| Outil | Résultat | Commentaire |
-|:--|:--|:--|
-| HTML Validator | ✅ Aucune erreur critique | Structure conforme |
-| CSS Validator | ✅ Quelques warnings mineurs | Variables et reset OK |
-| PageSpeed Insights | 🔄 En cours | Objectif : > 90 / 100 |
-| WAVE Accessibilité | 🔄 En cours | Vérification alt, contrastes, titres |
+Arborescence principale:
 
-### Compatibilité
-| Navigateur | Résultat |
-|:--|:--|
-| Chrome (Desktop/Mobile) | ✅ |
-| Firefox | ✅ |
-| Safari | ✅ |
-| Edge | 🔄 À tester |
-
-### Accessibilité
-- Attributs `alt` sur toutes les images : ✅
-- Hiérarchie de titres logique (`h1` → `h2` → `h3`) : ✅
-- Contraste couleurs conforme WCAG : ✅
-- Navigation clavier : 🔄 test prévue
-- Zoom 200 % : lisible
+- `src/assets/css/`
+    - `reset.css` : reset minimal
+    - `variables.css` : variables globales + polices locales
+    - `base.css` : styles de base (typo, liens, boutons, accessibilité)
+    - `layout.css` : structure (topbar, hero, sections, footer, responsive)
+    - `pages.css` : styles spécifiques par page (cartes projets, formulaire, dark mode)
+- `src/assets/img/` : images (locales, optimisées)
+- `src/assets/fonts/` : polices locales (Inter en `.woff2`)
+- `src/assets/icons/` : icônes SVG (LinkedIn, GitHub)
+- `docs/` : documentation détaillée du projet (intro, arborescence, commits, CSS, bugs/solutions, checklist)
 
 ---
 
-## 5.  Usage de l’IA (si applicable)
+## 4) Points techniques réalisés
 
-### IA utilisée
-- **Nom et version :** ChatGPT (GPT-5) et Claude IA
-- **Contexte :** accompagnement pédagogique pour le code, la structure et la documentation.
+### HTML
+- Balises sémantiques: `header`, `nav`, `main`, `section`, `footer`, `article`, `figure`
+- Hiérarchie des titres: **1 seul `h1` par page**, puis `h2`, `h3`, etc.
+- Images avec attribut `alt` systématique
 
-### Utilisation détaillée
-- Aide à la rédaction de la documentation technique (`/docs/`).
-- Assistance dans la création des fichiers CSS (variables, reset, layout).
-- Vérification de la sémantique HTML et des bonnes pratiques d’accessibilité.
+### CSS
+- Variables CSS (couleurs, polices, espacements) dans `variables.css`
+- Layout moderne: **Grid** (cartes) + **Flex** (topbar, actions)
+- Interactions: `:hover`, `:focus-visible`, `:visited`
+- Responsive: breakpoints utilisés (ex: 600px, 768px, 1024px)
+- Mode sombre: `@media (prefers-color-scheme: dark)` (lisibilité + composants)
 
-### Proportion
-| Partie | Personnel | Aidé par IA |
-|:--|:--:|:--:|
-| Structure HTML | 80 % | 20 % |
-| CSS et responsive | 70 % | 30 % |
-| Documentation | 60 % | 40 % |
-| Tests / validations | 100 % | 0 % |
+### Accessibilité (a11y)
+- Lien d’évitement: `.skip-link`
+- Focus clavier visible: `:focus-visible`
+- Texte pour lecteurs d’écran: `.sr-only`
 
->  L’IA a été utilisée comme **outil d’apprentissage**.  
-> Le code a été **compris, adapté et commenté** avant intégration.
-
----
-
-## 6.  Bilan personnel
-
-### Ce que j’ai appris
-- Créer un site HTML/CSS complet avec une structure claire.
-- Gérer un projet avec Git et commits réguliers.
-- Comprendre le responsive design (Flexbox, media queries).
-- Documenter efficacement son travail avec Markdown.
-- Appliquer les bonnes pratiques d’accessibilité.
-
-### Difficultés rencontrées
-- Organisation du CSS (ordre d’import et variables).
-- Erreurs Git au début (fichiers non suivis).
-- Adaptation du design sur mobile.
-
-### Réussites et fiertés
-- Structure du projet claire et conforme.
-- Documentation complète et lisible.
-- Design sobre et cohérent avec la palette de couleurs.
-- Meilleure compréhension du lien entre HTML et CSS.
-
-### Améliorations possibles
-- Ajouter des animations douces (CSS `transition`, `transform`).
-- Créer une vraie page “Contact” avec formulaire.
-- Ajouter un menu burger pour mobile.
-- Optimiser encore les performances et l’accessibilité.
+### Ressources locales
+- Polices: locales dans `/fonts` (pas de CDN)
+- Images: locales dans `/img`, optimisées
 
 ---
 
- **Projet réalisé dans le cadre du module HTML/CSS — ESIG Delémont (Suisse)**  
- *Ana-Maria Voisard* — Étudiante en Informatique de Gestion  
- *Année 2025*
+## 5) Ordre de chargement CSS dans chaque page
+
+1. `reset.css`
+2. `variables.css`
+3. `base.css`
+4. `layout.css`
+5. `pages.css`
+
+Cet ordre garantit: base propre → variables disponibles → styles globaux → layout → styles spécifiques.
+
+---
+
+## 6) Outils et méthodologie
+
+- IDE: WebStorm
+- Versioning: Git + GitHub + GitHub Desktop
+- Déploiement: GitHub Pages
+- Méthode: itérations courtes + commits réguliers (corrections, refactor CSS, accessibilité, dark mode, validations)
+
+---
+
+## 7) Tests et validations
+
+### Validation HTML
+- Outil: Nu Html Checker (W3C)
+- Résultat: **aucune erreur / aucun warning** (après nettoyage)
+
+### Validation CSS
+- Outil: W3C CSS Validator
+- Résultat: **aucune erreur**
+
+### Performance (PageSpeed / Lighthouse)
+- Mobile: Perf **90**, Accessibilité **95**, Bonnes pratiques **100**, SEO **91**
+- Desktop: Perf **100**, Accessibilité **95**, Bonnes pratiques **100**, SEO **91**
+
+### Compatibilité navigateurs
+- Tests manuels: Firefox, Chrome, Edge (desktop)
+- Vérification complémentaire: audit Lighthouse via PageSpeed
+
+---
+
+## 8) Difficultés rencontrées et solutions
+
+- Uniformisation des cartes projets (hauteurs / images) → ajustements Grid + règles image
+- Lisibilité du dark mode (titres, textes, boutons) → corrections de contraste + surcharges ciblées
+- Validation W3C: suppression d’éléments inutiles/ambiguës (ex: roles redondants, slash sur void elements)
+
+Détails complets: voir `docs/04_bugs_et_solutions.md`.
+
+---
+
+## 9) Améliorations possibles
+
+- Ajouter de vraies pages “Détails” pour chaque projet (TimeHive, Mini-Tricorder)
+- Ajouter un formulaire de contact réel (backend) ou un lien mailto sécurisé
+- Ajouter plus de projets + captures + explications techniques (stack, difficultés, solutions)
+
+---
+
+## 10) Transparence sur l’usage d’IA
+
+L’IA (ChatGPT et Claude) a été utilisée comme **assistant pédagogique**:
+- clarification de concepts (HTML/CSS, accessibilité, responsive)
+- aide au debug (cartes, hover, dark mode)
+- amélioration de la documentation (structuration, checklist)
+
+Tout le code a été relu, compris et adapté au projet.
+
+---
+
+## Auteur
+
+Ana-Maria Voisard — ESIG (informatique de gestion)

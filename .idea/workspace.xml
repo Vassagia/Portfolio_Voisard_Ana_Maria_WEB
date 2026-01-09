@@ -4,9 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="236a0f59-0082-473f-8df0-69c704a1f90e" name="Changes" comment="fix(html): nettoyage W3C (meta sans slash, suppression roles inutiles)">
+    <list default="true" id="236a0f59-0082-473f-8df0-69c704a1f90e" name="Changes" comment="fix: hyperlink tricorder card">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projets.html" beforeDir="false" afterPath="$PROJECT_DIR$/projets.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/00_intro.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/00_intro.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/01_arborescence.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/01_arborescence.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/02_commits.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/02_commits.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/03_css.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/03_css.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/04_bugs_et_solutions.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/04_bugs_et_solutions.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/05_checklist_projet.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/05_checklist_projet.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +115,7 @@
       <workItem from="1762949608047" duration="1754000" />
       <workItem from="1763552333239" duration="8905000" />
       <workItem from="1764158850417" duration="3741000" />
-      <workItem from="1767959962093" duration="13167000" />
+      <workItem from="1767959962093" duration="16806000" />
     </task>
     <task id="LOCAL-00001" summary="chore: structure de base du projet (HTML/CSS/JS)">
       <option name="closed" value="true" />
@@ -367,7 +373,15 @@
       <option name="project" value="LOCAL" />
       <updated>1767972182128</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="fix: hyperlink tricorder card">
+      <option name="closed" value="true" />
+      <created>1767991660459</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1767991660459</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -412,7 +426,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat(cv): créer page CV sémantique (profil, compétences, expériences)" />
     <MESSAGE value="feat(contact): créer page Contact avec formulaire accessible" />
     <MESSAGE value="feat(projets): création page projets avec 3 cartes responsive &#10;+ assets : ajout chemin vers linkedIn et GitHub" />
     <MESSAGE value="fix(nav): uniformiser la navigation et définir la page active" />
@@ -437,6 +450,7 @@
     <MESSAGE value="style: theme light/dark + cartes projets uniformes" />
     <MESSAGE value="Fix dark mode readability + buttons hover" />
     <MESSAGE value="fix(html): nettoyage W3C (meta sans slash, suppression roles inutiles)" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix(html): nettoyage W3C (meta sans slash, suppression roles inutiles)" />
+    <MESSAGE value="fix: hyperlink tricorder card" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: hyperlink tricorder card" />
   </component>
 </project>
